@@ -83,7 +83,18 @@ header p {
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid #a6a5c0;
+  background: #ebf6ff;
+  border-left: 3px solid #a0c5f0;
+  border-radius: 8px;
 }
+
+.dica {
+  background: #fff8d6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
 
 .btn {
   display: inline-block;
