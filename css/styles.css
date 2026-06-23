@@ -15,10 +15,12 @@ header {
   color: white;
   text-align: center;
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   gap: 15px;
+}
+
+.header-texto {
+  text-align: center;
 }
 
 header h1 {
@@ -34,7 +36,12 @@ header p {
     width: 60px;
     height: auto;
     margin-bottom: 0px;
-    border-radius: 40%;
+    border-radius: 50%;
+
+     position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .cards {
@@ -50,6 +57,10 @@ header p {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 .card h2 {
