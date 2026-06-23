@@ -60,6 +60,20 @@ header p {
   margin-bottom: 15px;
 }
 
+.btn {
+  display: inline-block;
+  background: #0070f3;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #005ad1;
+}
+
 button {
   background: #0070f3;
   color: white;
