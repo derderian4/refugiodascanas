@@ -122,11 +122,52 @@ button {
 button:hover {
   background: #005ad1;
 }
+/* Botão do WhatsApp */
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.btn-whatsapp:hover {
+  background: #1EBE5D;
+}
+/* Botão do Instagram */
+.btn-instagram {
+  background: #C13584;
+  color: white;
+}
+
+.btn-instagram:hover {
+  background: #A52D70;
+}
 
 footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+}
+
+
+
+.access-list {
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.access-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.intro {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.final {
+  margin-top: 15px;
+  font-style: italic;
 }
 
 /* Responsivo */
