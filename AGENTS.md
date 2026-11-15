@@ -8,6 +8,7 @@
 - Não repita perguntas já respondidas nesta conversa ou registradas em `agents/memory.md`.
 - Preserve alterações existentes fora do escopo solicitado.
 - Ao concluir, resuma as mudanças e informe as verificações realizadas.
+- Sempre perguntar antes de ALTERAR QUALQUER DOCUMENTO OU ARQUIVO
 
 ## Desenvolvimento
 
@@ -17,6 +18,7 @@
 - Use HTML semântico, nomes de classe consistentes e caminhos relativos compatíveis com a pasta de cada página.
 - Mantenha os componentes compartilhados em `components/` e carregue-os pelo mecanismo existente em `js/include.js`.
 - Não execute testes automatizados, a menos que o usuário peça. Faça verificações estáticas adequadas ao escopo, como caminhos locais e `git diff --check`.
+- Sempre perguntar antes de ALTERAR QUALQUER DOCUMENTO OU ARQUIVO
 
 ## Memória do projeto
 
@@ -24,3 +26,4 @@
 - Acrescente à memória apenas preferências duradouras ou decisões de projeto confirmadas pelo usuário. Não registre detalhes transitórios de tarefas.
 - Acrescente à memória em `agents/memory.md` e indique que aprendeu algo e armazenou.
 - Mantenha a memória curta, organizada por tópicos e atualizada quando uma decisão anterior mudar.
+- Sempre perguntar antes de ALTERAR QUALQUER DOCUMENTO OU ARQUIVO
