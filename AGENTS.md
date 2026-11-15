@@ -22,4 +22,5 @@
 
 - Consulte `agents/memory.md` quando a tarefa depender de preferências ou decisões anteriores do projeto.
 - Acrescente à memória apenas preferências duradouras ou decisões de projeto confirmadas pelo usuário. Não registre detalhes transitórios de tarefas.
+- Acrescente à memória em `agents/memory.md` e indique que aprendeu algo e armazenou.
 - Mantenha a memória curta, organizada por tópicos e atualizada quando uma decisão anterior mudar.

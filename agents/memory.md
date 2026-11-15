@@ -12,3 +12,4 @@
 - As páginas estão organizadas em `pages/acomodacoes/`, `pages/hospedes/` e `pages/contatos/`.
 - O guia do hóspede começa em `pages/hospedes/index.html`.
 - A identidade visual aprovada usa fundo areia, verde-marinho, títulos serifados e cartões independentes; as páginas compartilham `css/styles.css`.
+- O cabeçalho compartilhado mantém a marca à esquerda e um menu expansível à direita com links para Acomodações, Hóspedes e Contato.
