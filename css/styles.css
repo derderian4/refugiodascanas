@@ -1,22 +1,74 @@
+/* =========================================================
+   Refúgio das Canas – Ilhabela
+   CSS mobile-first. Mesmos nomes de classe do seu CSS original.
+   ========================================================= */
+
+:root {
+  --mare: #0e5a6b;          /* azul-petróleo do canal */
+  --mare-escuro: #0a2f38;   /* cabeçalho */
+  --mata: #3f7d58;          /* verde da mata atlântica */
+  --sol: #e8b23a;           /* destaque das dicas */
+  --bruma: #eef3f1;         /* fundo da página */
+  --papel: #ffffff;
+  --texto: #1d2b2f;
+  --texto-suave: #4a5b60;
+  --linha: #d6e1de;
+  --raio: 16px;
+
+  --fonte-titulo: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --fonte-texto: "Avenir Next", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
+body {
+  font-family: var(--fonte-texto);
+  font-size: 1rem;            /* 16px: evita zoom automático no iPhone */
+  line-height: 1.6;
+  background: var(--bruma);
+  color: var(--texto);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Cabeçalho ---------- */
+
 header {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 20px;
   position: relative;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  background: var(--mare-escuro);
+  color: #fff;
+  padding: calc(20px + env(safe-area-inset-top, 0px)) 20px 22px;
+  margin-bottom: 14px;        /* espaço para a borda ondulada */
+}
+
+/* borda ondulada: lembra a marola do canal */
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 13px;
+  background: radial-gradient(circle at 12px 0, var(--mare-escuro) 12px, transparent 12.5px) repeat-x;
+  background-size: 24px 13px;
+  pointer-events: none;
 }
 
 .header-texto {
@@ -24,155 +76,267 @@ header {
 }
 
 header h1 {
-  margin: 0;
-  font-size: 24px;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
 
 header p {
-  opacity: 0.8;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 .logo {
-    width: 60px;
-    height: auto;
-    margin-bottom: 0px;
-    border-radius: 50%;
-
-     position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.85);
 }
+
+/* ---------- Lista de cartões ---------- */
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 14px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 16px 24px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-3px);
+  position: relative;
+  background: var(--papel);
+  padding: 20px 18px;
+  border-radius: var(--raio);
+  border: 1px solid var(--linha);
+  border-left: 5px solid var(--mare);
+  box-shadow: 0 1px 3px rgba(10, 47, 56, 0.08);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card h2 {
-  margin-bottom: 10px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 
 .card h3 {
-  margin-bottom: 10px;
+  font-family: var(--fonte-titulo);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin-bottom: 6px;
 }
 
 .card p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 12px;
-    text-align: justify;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--texto-suave);
+  margin-bottom: 14px;
+  text-align: left;           /* texto justificado fica cheio de buracos no celular */
+  max-width: 65ch;
 }
 
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Opcional: adicione class="card card-link" nos cartões da página inicial
+   e o cartão inteiro vira área de toque, não só o botão. */
+.card-link > .btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--raio);
+}
+
+.card-link:active {
+  transform: scale(0.985);
+}
+
+/* ---------- Blocos dentro dos cartões ---------- */
+
 .place {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid #a6a5c093;
-  background: #7e9cfc0a;
-  border-left: 3px solid #a0c5f069;
-  border-radius: 8px;
+  margin-top: 18px;
+  padding: 14px 14px 14px 16px;
+  background: rgba(14, 90, 107, 0.06);
+  border-left: 4px solid var(--mata);
+  border-radius: 10px;
 }
 
 .dica {
-  background: #fffae4bd;
-  padding: 10px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-
-
-.btn {
-  display: inline-block;
-  background: #0070f3;
-  color: white;
-  padding: 10px 15px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #fff4d6;
+  border-left: 4px solid var(--sol);
   border-radius: 8px;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #4a3b0c;
+  font-size: 0.95rem;
 }
 
-.btn:hover {
-  background: #005ad1;
+.dica p {
+  color: inherit;
 }
-
-button {
-  background: #0070f3;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #005ad1;
-}
-/* Botão do WhatsApp */
-.btn-whatsapp {
-  background: #25D366;
-  color: white;
-}
-
-.btn-whatsapp:hover {
-  background: #1EBE5D;
-}
-/* Botão do Instagram */
-.btn-instagram {
-  background: #C13584;
-  color: white;
-}
-
-.btn-instagram:hover {
-  background: #A52D70;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
-}
-
-
 
 .access-list {
   text-align: left;
-  margin: 15px 0;
-  padding-left: 20px;
+  margin: 12px 0;
+  padding-left: 1.2em;
 }
 
 .access-list li {
   margin-bottom: 8px;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .intro {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .final {
-  margin-top: 15px;
+  margin-top: 14px;
   font-style: italic;
 }
 
-/* Responsivo */
-@media (min-width: 768px) {
+/* ---------- Botões ---------- */
+
+.btn,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;           /* tamanho confortável para o dedo */
+  padding: 12px 22px;
+  background: var(--mare);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active,
+button:active {
+  transform: scale(0.97);
+}
+
+/* No celular o botão ocupa a largura toda */
+.card > .btn,
+.card > button {
+  display: flex;
+  width: 100%;
+}
+
+.card > .btn + .btn,
+.card > .btn + button,
+.card > button + .btn {
+  margin-top: 10px;
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+  background: #12804a;
+  color: #fff;
+}
+
+/* Botão do Instagram */
+.btn-instagram {
+  background: #c13584;
+  color: #fff;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  text-align: center;
+  padding: 18px 16px calc(22px + env(safe-area-inset-bottom, 0px));
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+/* ---------- Acessibilidade ---------- */
+
+:focus-visible {
+  outline: 3px solid var(--sol);
+  outline-offset: 3px;
+}
+
+/* ---------- Telas com mouse (hover) ---------- */
+
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(10, 47, 56, 0.12);
+  }
+
+  .btn:hover,
+  button:hover {
+    background: #0a4553;
+  }
+
+  .btn-whatsapp:hover {
+    background: #0d6a3d;
+  }
+
+  .btn-instagram:hover {
+    background: #a52d70;
+  }
+}
+
+/* ---------- Telas maiores ---------- */
+
+@media (min-width: 640px) {
+  header {
+    padding-top: 28px;
+    padding-bottom: 30px;
+  }
+
+  .logo {
+    width: 88px;
+    height: 88px;
+  }
+
   .cards {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 24px 32px;
+  }
+
+  /* No computador o botão volta ao tamanho do texto */
+  .card > .btn,
+  .card > button {
+    display: inline-flex;
+    width: auto;
+  }
+
+  .card > .btn + .btn,
+  .card > .btn + button,
+  .card > button + .btn {
+    margin-top: 0;
+    margin-left: 8px;
+  }
+}
+
+/* ---------- Quem prefere menos movimento ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
   }
 }
