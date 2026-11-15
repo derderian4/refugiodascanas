@@ -3,131 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refugio das Canas</title>
+  <title>Onde comer | Refúgio das Canas</title>
   <link rel="icon" type="image/png" href="../img/logo.png">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="../js/include.js" defer></script>
 </head>
-
 <body>
-
   <div id="header"></div>
 
   <main>
-    <section class="cards">
+    <section class="page-intro" aria-labelledby="titulo-alimentacao">
+      <p class="page-eyebrow">Sabores da ilha</p>
+      <h2 id="titulo-alimentacao">Onde comer em Ilhabela</h2>
+      <p>Uma seleção de bares, quiosques e pizzarias para aproveitar a gastronomia local.</p>
+    </section>
 
-      <div class="card">
-        <h2>QUIOSQUES E BARES NA PRAIA</h2>
-        <p>
-          Lista de quiosques e bares na praia próximos ao Refúgio das Canas, onde você pode desfrutar de deliciosos petiscos, bebidas refrescantes e aproveitar a vista deslumbrante do mar. Aproveite a experiência gastronômica à beira-mar!
-        </p>
-        <!-- Praia 1 -->
-        <div class="place">
-          <p><strong>Bar e Restaurante Manjuba</strong></p>
-          <ul class="access-list">
-            <li>Mesas externas</li>
-            <li>Ótimos coquetéis</li>
-            <li>Bom para assistir a esportes</li>
-            <li>Comida de praia</li>
-          </ul>
+    <nav class="section-nav" aria-label="Categorias de alimentação">
+      <a href="#praia">Quiosques e bares <span>4</span></a>
+      <a href="#pizzarias">Pizzarias <span>4</span></a>
+    </nav>
 
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+e+Restaurante+Manjuba+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
+    <section class="content-section" id="praia" aria-labelledby="titulo-praia">
+      <header class="section-header">
+        <span class="section-number">01</span>
+        <div>
+          <h2 id="titulo-praia">Quiosques e bares na praia</h2>
+          <p>Petiscos, bebidas e refeições perto do mar.</p>
         </div>
+      </header>
+      <div class="item-grid">
+        <article class="item-card">
+          <span class="item-label">Bares e quiosques</span>
+          <h3>Bar e Restaurante Manjuba</h3>
+          <p>Mesas externas, coquetéis, comida de praia e espaço para assistir a esportes.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Bar+e+Restaurante+Manjuba+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
 
-        <!-- Praia 2 -->
-        <div class="place">
-          <p><strong>Castelhanos Bar</strong></p>
-          <ul class="access-list">
-            <li>Restaurante com comida caseira, beira de praia com bebidas naturais</li>
-          </ul>
+        <article class="item-card">
+          <span class="item-label">Bares e quiosques</span>
+          <h3>Castelhanos Bar</h3>
+          <p>Restaurante à beira da praia com comida caseira e bebidas naturais.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Castelhanos+Bar+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
 
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Castelhanos+Bar+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
+        <article class="item-card">
+          <span class="item-label">Bares e quiosques</span>
+          <h3>Sereia Beach</h3>
+          <p>Um point pé na areia com música, gastronomia, bons drinks e clima de luau.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Sereia+Beach+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
 
-        <!-- Praia 3 -->
-        <div class="place">
-          <p><strong>Sereia Beach</strong></p>
-          <ul class="access-list">
-            <li>O Sereia Beach em Ilhabela é o point para os dias de praia com sunsets e luau pé na areia. Música boa, gastronomia e bons drinks!</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Sereia+Beach+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
-
-        <!-- Praia 4 -->
-        <div class="place">
-          <p><strong>Porto do Engenho</strong></p>
-          <ul class="access-list">
-            <li>Localização excelente, pé na areia, boa comida a um preço razoável!</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Porto+do+Engenho+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2><i class="fa-solid fa-road"></i> PIZZARIA</h2>
-        <p>Confira algumas opções de pizzarias em Ilhabela.</p>
-
-        <!-- Pizzaria 1 -->
-        <div class="place">
-          <p><strong>Porto do Engenho</strong></p>
-          <ul class="access-list">
-            <li>Localização excelente, pé na areia, boa comida a um preço razoável!</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Porto+do+Engenho+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
-
-        <!-- PIZZARIA 2 -->
-        <div class="place">
-          <p><strong>Pizzaria Mozzarello</strong></p>
-          <ul class="access-list">
-            <li>Boa comida a um preço razoável!</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Pizzaria+Mozzarello+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
-
-        <!-- PIZZARIA 3 -->
-        <div class="place">
-          <p><strong>Pizzaria Toscanella</strong></p>
-          <ul class="access-list">
-            <li>A Pizzaria Toscanella oferece uma experiência verdadeiramente única</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Pizzaria+Toscanella+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
-
-        <!-- Pizzaria 4 -->
-        <div class="place">
-          <p><strong>Caminho da Pizza</strong></p>
-          <ul class="access-list">
-            <li>As pizzas têm massa firme e crocante, para comer com as mãos, e saborosas combinações da casa que vão do tradicional Pomodoro até opções especiais como Salmão Defumado.</li>
-          </ul>
-
-          <p class="final">
-            <a href="https://www.google.com/maps/search/?api=1&amp;query=Caminho+da+Pizza+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
-          </p>
-        </div>
+        <article class="item-card">
+          <span class="item-label">Bares e quiosques</span>
+          <h3>Porto do Engenho</h3>
+          <p>Localização pé na areia e boa comida a um preço razoável.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Porto+do+Engenho+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
       </div>
     </section>
 
+    <section class="content-section" id="pizzarias" aria-labelledby="titulo-pizzarias">
+      <header class="section-header">
+        <span class="section-number">02</span>
+        <div>
+          <h2 id="titulo-pizzarias">Pizzarias</h2>
+          <p>Opções para uma refeição descontraída no fim do dia.</p>
+        </div>
+      </header>
+      <div class="item-grid">
+        <article class="item-card">
+          <span class="item-label">Pizzaria</span>
+          <h3>Porto do Engenho</h3>
+          <p>Localização pé na areia e boa comida a um preço razoável.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Porto+do+Engenho+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
+
+        <article class="item-card">
+          <span class="item-label">Pizzaria</span>
+          <h3>Mozzarello</h3>
+          <p>Uma opção de pizza para aproveitar durante a estadia em Ilhabela.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Pizzaria+Mozzarello+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
+
+        <article class="item-card">
+          <span class="item-label">Pizzaria</span>
+          <h3>Toscanella</h3>
+          <p>Conheça a Pizzaria Toscanella e confira as opções disponíveis.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Pizzaria+Toscanella+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
+
+        <article class="item-card">
+          <span class="item-label">Pizzaria</span>
+          <h3>Caminho da Pizza</h3>
+          <p>Pizzas de massa firme e crocante, com combinações tradicionais e especiais.</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Caminho+da+Pizza+Ilhabela" target="_blank" rel="noopener noreferrer" class="btn">Ver no mapa</a>
+        </article>
+      </div>
+    </section>
   </main>
 
   <div id="footer"></div>

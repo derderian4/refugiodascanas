@@ -4,45 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guia local | Refúgio das Canas</title>
-
   <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/include.js" defer></script>
 </head>
 <body>
 
-<header>
-  <h1>🏡 Refugio das Canas. </h1>
-  <p>Seu guia local</p>
-</header>
+  <div id="header"></div>
 
   <main>
-
-    <section class="cards">
-
-      <div class="card">
-        <h2>🍽 Restaurantes</h2>
-        <p>Descubra onde comer bem</p>
-        <a href="alimentacao.html" class="btn">Ver opções</a>
-      </div>
-
-      <div class="card">
-        <h2>📍 Pontos Turísticos</h2>
-        <p>Lugares imperdíveis</p>
-        <a href="pontos_turisticos.html" class="btn">Explorar</a>
-      </div>
-
-      <div class="card">
-        <h2>🎉 O que fazer</h2>
-        <p>Atividades e passeios</p>
-        <a href="atividades.html" class="btn">Descobrir</a>
-      </div>
-
+    <section class="page-intro" aria-labelledby="titulo-guia-local">
+      <p class="page-eyebrow">Explore a ilha</p>
+      <h2 id="titulo-guia-local">Seu guia local</h2>
+      <p>Escolha uma categoria e comece a planejar seus dias em Ilhabela.</p>
     </section>
 
+    <section class="item-grid" aria-label="Categorias do guia">
+      <article class="item-card">
+        <span class="item-label">Sabores locais</span>
+        <h3>Restaurantes</h3>
+        <p>Descubra onde comer bem.</p>
+        <a href="alimentacao.html" class="btn">Ver opções</a>
+      </article>
+
+      <article class="item-card">
+        <span class="item-label">Explore a ilha</span>
+        <h3>Pontos turísticos</h3>
+        <p>Conheça praias, mirantes e cachoeiras.</p>
+        <a href="pontos_turisticos.html" class="btn">Explorar</a>
+      </article>
+
+      <article class="item-card">
+        <span class="item-label">Passeios</span>
+        <h3>O que fazer</h3>
+        <p>Encontre atividades para aproveitar sua estadia.</p>
+        <a href="atividades.html" class="btn">Descobrir</a>
+      </article>
+    </section>
   </main>
 
-<footer>
-  <p>© 2026 Refugio das Canas - ILHABELA - SP</p>
-</footer>
+  <div id="footer"></div>
 
 </body>
 </html>
