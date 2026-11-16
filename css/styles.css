@@ -175,6 +175,53 @@ main {
   flex: 1;
 }
 
+.breadcrumbs {
+  margin: 18px 0 0;
+  color: var(--texto-suave);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.breadcrumbs ol {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  min-width: 0;
+}
+
+.breadcrumbs li + li::before {
+  margin: 0 10px;
+  color: #9aa9a7;
+  content: ">";
+}
+
+.breadcrumbs a {
+  color: var(--mar);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--mar-profundo);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--texto);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.breadcrumbs + .page-intro {
+  padding-top: 30px;
+}
+
 .home-intro {
   max-width: 760px;
   margin: 0 auto;
