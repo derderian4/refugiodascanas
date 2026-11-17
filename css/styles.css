@@ -222,6 +222,123 @@ main {
   padding-top: 30px;
 }
 
+.ferry-callout {
+  max-width: 900px;
+  margin: 0 auto 64px;
+  padding: 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  background: var(--papel);
+  box-shadow: 0 12px 38px rgba(20, 57, 59, 0.055);
+}
+
+.ferry-callout .page-eyebrow {
+  margin-bottom: 6px;
+}
+
+.ferry-callout h2 {
+  margin: 0;
+  color: var(--mar-profundo);
+  font-family: var(--fonte-titulo);
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ferry-callout p:last-child {
+  margin: 7px 0 0;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+}
+
+.ferry-callout .btn {
+  flex: 0 0 auto;
+}
+
+.ferry-monitor {
+  margin: 0 0 70px;
+  padding: 26px;
+  border: 1px solid var(--linha);
+  border-radius: 9px;
+  background: var(--papel);
+  box-shadow: 0 12px 38px rgba(20, 57, 59, 0.055);
+}
+
+.ferry-monitor-header,
+.ferry-monitor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ferry-monitor-header {
+  margin-bottom: 10px;
+}
+
+.ferry-monitor-header .item-label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ferry-monitor-header h2 {
+  margin: 0;
+  color: var(--mar-profundo);
+  font-family: var(--fonte-titulo);
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.ferry-refresh {
+  border: 0;
+  font: inherit;
+}
+
+.ferry-monitor-note,
+.ferry-monitor-footer p {
+  color: var(--texto-suave);
+  font-size: 0.86rem;
+}
+
+.ferry-monitor-note {
+  margin: 0 0 18px;
+}
+
+.ferry-frame-wrap {
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: 7px;
+  background: var(--areia);
+}
+
+.ferry-frame-wrap iframe {
+  width: 100%;
+  height: min(1100px, 78vh);
+  min-height: 720px;
+  display: block;
+  border: 0;
+  background: var(--papel);
+}
+
+.ferry-monitor-footer {
+  padding-top: 14px;
+}
+
+.ferry-monitor-footer p {
+  margin: 0;
+}
+
+.ferry-monitor-footer a {
+  color: var(--mar);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
 .home-intro {
   max-width: 760px;
   margin: 0 auto;
@@ -880,6 +997,34 @@ button {
 
   .photo-lightbox-footer {
     font-size: 0.82rem;
+  }
+
+  .ferry-callout,
+  .ferry-monitor-header,
+  .ferry-monitor-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .ferry-callout {
+    padding: 22px;
+  }
+
+  .ferry-callout .btn {
+    align-self: flex-start;
+  }
+
+  .ferry-monitor {
+    padding: 18px;
+  }
+
+  .ferry-monitor-header h2 {
+    font-size: 1.45rem;
+  }
+
+  .ferry-frame-wrap iframe {
+    height: 78vh;
+    min-height: 680px;
   }
 
   .home-grid {
