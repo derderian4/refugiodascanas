@@ -300,7 +300,8 @@ main {
 }
 
 .ferry-monitor-note,
-.ferry-monitor-footer p {
+.ferry-monitor-footer p,
+.ferry-status {
   color: var(--texto-suave);
   font-size: 0.86rem;
 }
@@ -309,20 +310,116 @@ main {
   margin: 0 0 18px;
 }
 
-.ferry-frame-wrap {
+.ferry-status {
+  margin: 0 0 18px;
+}
+
+.ferry-status.is-error {
+  color: #8d3c31;
+}
+
+.ferry-refresh:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.ferry-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ferry-direction-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ferry-direction-card h3 {
+  margin: 2px 0 12px;
+  color: var(--mar-profundo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.18rem, 2vw, 1.45rem);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.ferry-direction-card h3 span {
+  padding: 0 4px;
+  color: var(--dourado);
+}
+
+.ferry-wait {
+  margin: 0;
+  color: var(--mar-profundo);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.ferry-wait-unit {
+  margin-left: 7px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.ferry-wait-caption {
+  margin: 8px 0 22px;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.ferry-camera {
   overflow: hidden;
   border: 1px solid var(--linha);
   border-radius: 7px;
   background: var(--areia);
 }
 
-.ferry-frame-wrap iframe {
+.ferry-camera-header {
+  padding: 11px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ferry-camera-header h4 {
+  margin: 0;
+  color: var(--mar-profundo);
+  font-size: 0.9rem;
+}
+
+.ferry-camera-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.ferry-camera-picker select {
+  min-height: 38px;
+  max-width: 140px;
+  padding: 6px 9px;
+  border: 1px solid var(--linha);
+  border-radius: 5px;
+  color: var(--mar-profundo);
+  background: var(--papel);
+  font: inherit;
+}
+
+.ferry-camera iframe {
   width: 100%;
-  height: min(1100px, 78vh);
-  min-height: 720px;
+  aspect-ratio: 16 / 9;
+  min-height: 190px;
   display: block;
   border: 0;
-  background: var(--papel);
+  background: #17272a;
 }
 
 .ferry-monitor-footer {
@@ -1022,9 +1119,27 @@ button {
     font-size: 1.45rem;
   }
 
-  .ferry-frame-wrap iframe {
-    height: 78vh;
-    min-height: 680px;
+  .ferry-direction-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .ferry-direction-card {
+    padding: 18px;
+  }
+
+  .ferry-camera-header {
+    align-items: flex-start;
+  }
+
+  .ferry-camera-picker {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+  }
+
+  .ferry-camera iframe {
+    min-height: 170px;
   }
 
   .home-grid {

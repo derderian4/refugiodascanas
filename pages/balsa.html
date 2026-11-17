@@ -24,34 +24,72 @@
     <section class="page-intro" aria-labelledby="titulo-balsa">
       <p class="page-eyebrow">São Sebastião ↔ Ilhabela</p>
       <h2 id="titulo-balsa">Acompanhe a fila da balsa</h2>
-      <p>Veja o painel da operadora para consultar a situação nos dois sentidos da travessia.</p>
+      <p>Consulte os tempos de espera e veja imagens das filas nos dois sentidos da travessia.</p>
     </section>
 
     <section class="ferry-monitor" aria-labelledby="titulo-monitor">
       <header class="ferry-monitor-header">
         <div>
-          <span class="item-label">Fonte: AcquaVias</span>
-          <h2 id="titulo-monitor">Painel da travessia</h2>
+          <span class="item-label">Informações da travessia</span>
+          <h2 id="titulo-monitor">Escolha o sentido</h2>
         </div>
-        <button class="btn ferry-refresh" type="button" data-ferry-refresh>Atualizar painel</button>
+        <button class="btn ferry-refresh" type="button" data-ferry-refresh>Atualizar tempos</button>
       </header>
 
-      <p class="ferry-monitor-note">Os tempos e avisos são fornecidos pela operadora e podem mudar a qualquer momento. O horário abaixo indica quando o painel externo terminou de carregar, não o horário da medição da fila.</p>
+      <p class="ferry-monitor-note">Tempos de espera para embarque. A consulta automática acontece a cada 2 minutos; o horário indica quando os dados foram consultados, não o momento da medição na fila.</p>
 
-      <div class="ferry-frame-wrap">
-        <iframe
-          data-ferry-frame
-          data-source="https://acquavias.com.br/sao-sebastiao-ilhabela/"
-          src="https://acquavias.com.br/sao-sebastiao-ilhabela/"
-          title="Painel da AcquaVias com os tempos de espera da balsa nos dois sentidos"
-          loading="eager"
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
+      <p class="ferry-status" data-ferry-status aria-live="polite">Consultando a AcquaVias…</p>
+
+      <div class="ferry-direction-grid">
+        <article class="ferry-direction-card" aria-labelledby="titulo-sao-ilha">
+          <span class="item-label">Continente para a ilha</span>
+          <h3 id="titulo-sao-ilha">São Sebastião <span aria-hidden="true">→</span> Ilhabela</h3>
+          <p class="ferry-wait"><span class="ferry-wait-value" data-ferry-wait="sao">—</span><span class="ferry-wait-unit" data-ferry-unit="sao"></span></p>
+          <p class="ferry-wait-caption">Tempo de espera para embarque</p>
+
+          <div class="ferry-camera">
+            <div class="ferry-camera-header">
+              <h4>Câmera da fila</h4>
+              <label class="ferry-camera-picker">
+                <span>Câmera</span>
+                <select data-camera-select aria-label="Câmera de São Sebastião">
+                  <option value="saosebastiao5">Câmera 1</option>
+                  <option value="saosebastiao2">Câmera 2</option>
+                  <option value="saosebastiao">Câmera 3</option>
+                </select>
+              </label>
+            </div>
+            <iframe data-camera-frame src="https://acquastream.i9ia.io/turismo/camera.html?f=saosebastiao5" title="Câmera ao vivo da fila em São Sebastião" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </article>
+
+        <article class="ferry-direction-card" aria-labelledby="titulo-ilha-sao">
+          <span class="item-label">Ilha para o continente</span>
+          <h3 id="titulo-ilha-sao">Ilhabela <span aria-hidden="true">→</span> São Sebastião</h3>
+          <p class="ferry-wait"><span class="ferry-wait-value" data-ferry-wait="ilha">—</span><span class="ferry-wait-unit" data-ferry-unit="ilha"></span></p>
+          <p class="ferry-wait-caption">Tempo de espera para embarque</p>
+
+          <div class="ferry-camera">
+            <div class="ferry-camera-header">
+              <h4>Câmera da fila</h4>
+              <label class="ferry-camera-picker">
+                <span>Câmera</span>
+                <select data-camera-select aria-label="Câmera de Ilhabela">
+                  <option value="ilhabela">Câmera 1</option>
+                  <option value="ilhabela2">Câmera 2</option>
+                  <option value="ilhabela3">Câmera 3</option>
+                  <option value="ilhabela4">Câmera 4</option>
+                </select>
+              </label>
+            </div>
+            <iframe data-camera-frame src="https://acquastream.i9ia.io/turismo/camera.html?f=ilhabela" title="Câmera ao vivo da fila em Ilhabela" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </article>
       </div>
 
       <div class="ferry-monitor-footer">
-        <p data-ferry-status aria-live="polite">Carregando painel da operadora…</p>
-        <a href="https://acquavias.com.br/sao-sebastiao-ilhabela/" target="_blank" rel="noopener noreferrer">Abrir o painel da AcquaVias em outra aba</a>
+        <p>Fonte dos tempos e das câmeras: <a href="https://acquavias.com.br/sao-sebastiao-ilhabela/" target="_blank" rel="noopener noreferrer">AcquaVias</a> · imagens transmitidas pela AcquaStream.</p>
+        <a href="https://acquavias.com.br/sao-sebastiao-ilhabela/" target="_blank" rel="noopener noreferrer">Abrir fonte oficial</a>
       </div>
     </section>
   </main>
