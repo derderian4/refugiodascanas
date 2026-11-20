@@ -12,6 +12,17 @@
 </head>
 
 <body>
+  <!-- Ícones SVG reutilizados na página -->
+  <svg class="t-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+    <symbol id="i-mala" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol>
+    <symbol id="i-balsa" viewBox="0 0 24 24"><path d="M4 15h16l-2 4H6z"/><path d="M7 15V9h10v6"/><path d="M10 9V6h4v3"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-5A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+    <symbol id="i-prato" viewBox="0 0 24 24"><path d="M5 3v8a2 2 0 0 0 2 2v8"/><path d="M9 3v8a2 2 0 0 1-2 2"/><path d="M7 3v6"/><path d="M17 21V3c-2 1-3 3.5-3 7s1 4 3 4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+    <symbol id="i-bussola" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></symbol>
+  </svg>
+
   <header class="t-header">
     <a class="t-marca" href="index.html">
       <img src="img/logo.png" alt="">
@@ -29,10 +40,10 @@
         <span>Menu</span>
       </summary>
       <nav class="t-menu-painel" aria-label="Navegação principal (celular)">
-        <a href="pages/acomodacoes/index.html"><span class="t-menu-emoji" aria-hidden="true">🏠</span>Acomodações</a>
-        <a href="pages/hospedes/index.html"><span class="t-menu-emoji" aria-hidden="true">🧳</span>Hóspedes</a>
-        <a href="pages/balsa.html"><span class="t-menu-emoji" aria-hidden="true">⛴</span>Balsa</a>
-        <a href="pages/contatos/contatos_uteis.html"><span class="t-menu-emoji" aria-hidden="true">📞</span>Contato</a>
+        <a href="pages/acomodacoes/index.html"><span class="t-ico t-ico-sm"><svg aria-hidden="true"><use href="#i-casa"/></svg></span>Acomodações</a>
+        <a href="pages/hospedes/index.html"><span class="t-ico t-ico-sm"><svg aria-hidden="true"><use href="#i-mala"/></svg></span>Hóspedes</a>
+        <a href="pages/balsa.html"><span class="t-ico t-ico-sm"><svg aria-hidden="true"><use href="#i-balsa"/></svg></span>Balsa</a>
+        <a href="pages/contatos/contatos_uteis.html"><span class="t-ico t-ico-sm"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>Contato</a>
       </nav>
     </details>
   </header>
@@ -47,7 +58,7 @@
     <ul class="t-grid" aria-label="Acesse o guia do Refúgio das Canas">
       <li>
         <a class="t-card" href="pages/acomodacoes/refugio-das-canas/index.html">
-          <span class="t-icone" aria-hidden="true">🏠</span>
+          <span class="t-ico"><svg aria-hidden="true"><use href="#i-casa"/></svg></span>
           <span class="t-rotulo">Sua estadia</span>
           <h2>Informações da acomodação</h2>
           <p>Comodidades, fotos e como chegar ao estúdio.</p>
@@ -56,7 +67,7 @@
       </li>
       <li>
         <a class="t-card" href="pages/hospedes/alimentacao.html">
-          <span class="t-icone" aria-hidden="true">🍽</span>
+          <span class="t-ico"><svg aria-hidden="true"><use href="#i-prato"/></svg></span>
           <span class="t-rotulo">Sabores locais</span>
           <h2>Alimentação</h2>
           <p>Descubra onde comer bem.</p>
@@ -65,7 +76,7 @@
       </li>
       <li>
         <a class="t-card" href="pages/hospedes/pontos_turisticos.html">
-          <span class="t-icone" aria-hidden="true">📍</span>
+          <span class="t-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
           <span class="t-rotulo">Explore a ilha</span>
           <h2>Praias, mirantes e cachoeiras</h2>
           <p>Lugares imperdíveis.</p>
@@ -74,7 +85,7 @@
       </li>
       <li>
         <a class="t-card" href="pages/hospedes/atividades.html">
-          <span class="t-icone" aria-hidden="true">🎉</span>
+          <span class="t-ico"><svg aria-hidden="true"><use href="#i-bussola"/></svg></span>
           <span class="t-rotulo">Passeios</span>
           <h2>O que fazer</h2>
           <p>Atividades e passeios.</p>
@@ -83,7 +94,7 @@
       </li>
       <li>
         <a class="t-card" href="pages/contatos/contatos_uteis.html">
-          <span class="t-icone" aria-hidden="true">📞</span>
+          <span class="t-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
           <span class="t-rotulo">Estamos por perto</span>
           <h2>Contatos</h2>
           <p>Fale com a gente pelo WhatsApp ou Instagram.</p>
@@ -94,7 +105,27 @@
   </main>
 
   <footer class="t-footer">
-    <p>© 2026 Refúgio das Canas · Ilhabela, SP</p>
+    <div class="t-footer-grid">
+      <div class="t-footer-marca">
+        <a class="t-marca" href="index.html">
+          <img src="img/logo.png" alt="">
+          <span>Refúgio das Canas</span>
+        </a>
+        <p>Hospedagens em meio à natureza no norte de Ilhabela.</p>
+      </div>
+
+      <div>
+        <h2>Fale com a gente</h2>
+        <ul>
+          <li>
+            <a href="https://wa.me/5512981264626?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Ref%C3%BAgio%20das%20Canas." target="_blank" rel="noopener noreferrer">
+              <svg class="t-footer-ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="t-footer-copy">© 2026 Refúgio das Canas · Ilhabela, SP</p>
   </footer>
 </body>
 </html>

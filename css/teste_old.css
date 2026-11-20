@@ -4,6 +4,7 @@
   --noite: #1f1a2e;
   --noite-2: #2c2440;
   --terracota: #e0694a;
+  --terracota-escuro: #c4532f;
   --sol: #f4b860;
   --rosa: #f08a8a;
   --creme: #fbf4ea;
@@ -34,8 +35,43 @@ img { display: block; max-width: 100%; }
   outline-offset: 3px;
 }
 
+/* Ícones SVG */
+.t-sprite { display: none; }
+
+.t-ico {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--sol), var(--terracota));
+}
+
+.t-ico svg,
+.t-footer-ico {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.t-ico-sm {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+}
+
+.t-ico-sm svg { width: 20px; height: 20px; }
+
 /* Cabeçalho */
 .t-header {
+  position: relative;
+  z-index: 5;
   padding: 18px max(20px, calc((100vw - 1100px) / 2));
   display: flex;
   align-items: center;
@@ -78,149 +114,7 @@ img { display: block; max-width: 100%; }
 
 .t-nav a:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
 
-/* Hero */
-.t-hero {
-  position: relative;
-  overflow: hidden;
-  padding: 80px max(20px, calc((100vw - 1100px) / 2)) 120px;
-  color: #fff;
-  background:
-    radial-gradient(circle at 80% 110%, var(--sol) 0 18%, transparent 19%),
-    linear-gradient(180deg, var(--noite) 0%, var(--noite-2) 45%, var(--terracota) 100%);
-}
-
-.t-hero::after {
-  position: absolute;
-  inset: auto 0 0;
-  height: 60px;
-  content: "";
-  background: var(--creme);
-  clip-path: polygon(0 60%, 15% 40%, 35% 70%, 55% 35%, 75% 65%, 100% 30%, 100% 100%, 0 100%);
-}
-
-.t-selo {
-  display: inline-block;
-  margin: 0 0 18px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.t-hero h1 {
-  max-width: 700px;
-  margin: 0;
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-}
-
-.t-hero h1 span { color: var(--sol); }
-
-.t-hero p {
-  max-width: 520px;
-  margin: 20px 0 0;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.08rem;
-}
-
-/* Cartões */
-main {
-  width: min(1100px, calc(100% - 40px));
-  margin: -40px auto 0;
-  position: relative;
-  z-index: 1;
-  flex: 1;
-}
-
-.t-grid {
-  margin: 0;
-  padding: 0 0 80px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  list-style: none;
-}
-
-.t-card {
-  height: 100%;
-  padding: 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: 1px solid var(--linha);
-  border-radius: var(--raio);
-  color: inherit;
-  background: #fff;
-  box-shadow: 0 10px 30px rgba(31, 26, 46, 0.07);
-  text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-}
-
-.t-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--terracota);
-  box-shadow: 0 18px 40px rgba(224, 105, 74, 0.18);
-}
-
-.t-icone {
-  width: 52px;
-  height: 52px;
-  display: grid;
-  place-items: center;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--sol), var(--rosa));
-  font-size: 1.5rem;
-}
-
-.t-rotulo {
-  color: var(--terracota);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.t-card h2 {
-  margin: 0;
-  font-size: 1.3rem;
-  line-height: 1.25;
-}
-
-.t-card p {
-  margin: 0;
-  color: var(--texto-suave);
-  font-size: 0.94rem;
-}
-
-.t-link {
-  margin-top: auto;
-  padding-top: 8px;
-  color: var(--terracota);
-  font-weight: 700;
-  font-size: 0.92rem;
-}
-
-.t-link::after { content: " →"; }
-
-/* Rodapé */
-.t-footer {
-  padding: 22px 20px;
-  color: rgba(255, 255, 255, 0.7);
-  background: var(--noite);
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-.t-footer p { margin: 0; }
-
 /* Menu do celular (oculto no computador) */
-.t-header { position: relative; }
-
 .t-menu { display: none; }
 
 .t-menu summary {
@@ -267,8 +161,8 @@ main {
 }
 
 .t-menu-painel a {
-  min-height: 56px;
-  padding: 12px 18px;
+  min-height: 58px;
+  padding: 10px 18px;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -289,20 +183,199 @@ main {
 .t-menu-painel a:hover,
 .t-menu-painel a:active { background: var(--creme); }
 
-.t-menu-emoji {
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: linear-gradient(135deg, var(--sol), var(--rosa));
+/* Hero com foto real */
+.t-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 96px max(20px, calc((100vw - 1100px) / 2)) 150px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(31, 26, 46, 0.88) 0%, rgba(44, 36, 64, 0.62) 50%, rgba(224, 105, 74, 0.78) 100%),
+    url("../pages/acomodacoes/refugio-das-canas/img/foto-principal.jpg") center / cover no-repeat,
+    var(--noite-2);
 }
 
+.t-hero::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 60px;
+  content: "";
+  background: var(--creme);
+  clip-path: polygon(0 60%, 15% 40%, 35% 70%, 55% 35%, 75% 65%, 100% 30%, 100% 100%, 0 100%);
+}
+
+.t-selo {
+  display: inline-block;
+  margin: 0 0 18px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.t-hero h1 {
+  max-width: 700px;
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+}
+
+.t-hero h1 span { color: var(--sol); }
+
+.t-hero p {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+}
+
+/* Conteúdo */
+main {
+  width: min(1100px, calc(100% - 40px));
+  margin: -70px auto 0;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+/* Cartões */
+.t-grid {
+  margin: 0;
+  padding: 0 0 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+.t-card {
+  height: 100%;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--linha);
+  border-radius: var(--raio);
+  color: inherit;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(31, 26, 46, 0.07);
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.t-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--terracota);
+  box-shadow: 0 18px 40px rgba(224, 105, 74, 0.18);
+}
+
+.t-rotulo {
+  color: var(--terracota-escuro);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.t-card h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.t-card p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.94rem;
+}
+
+.t-link {
+  margin-top: auto;
+  padding-top: 8px;
+  color: var(--terracota-escuro);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.t-link::after { content: " →"; }
+
+/* Rodapé completo */
+.t-footer {
+  padding: 36px max(20px, calc((100vw - 1100px) / 2)) 20px;
+  color: rgba(255, 255, 255, 0.72);
+  background: var(--noite);
+  font-size: 0.9rem;
+}
+
+.t-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 32px;
+}
+
+.t-footer-marca .t-marca { color: #fff; }
+
+.t-footer-marca p {
+  max-width: 320px;
+  margin: 14px 0 0;
+}
+
+.t-footer h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.t-footer ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+.t-footer ul a,
+.t-footer ul span {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.t-footer ul a:hover { color: var(--sol); }
+
+.t-footer-ico {
+  width: 18px;
+  height: 18px;
+  color: var(--sol);
+}
+
+.t-footer-copy {
+  margin: 28px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+/* Celular */
 @media (max-width: 640px) {
   .t-nav { display: none; }
   .t-menu { display: block; }
   .t-marca span { font-size: 0.95rem; }
-  .t-hero { padding-top: 56px; padding-bottom: 100px; }
+  .t-hero { padding-top: 56px; padding-bottom: 130px; }
 
   /* Cards viram lista estilo app */
   .t-grid {
@@ -338,14 +411,15 @@ main {
     background: var(--creme);
   }
 
-  .t-icone {
+  .t-card .t-ico {
     width: 46px;
     height: 46px;
     grid-column: 1;
     grid-row: 1 / 3;
     border-radius: 14px;
-    font-size: 1.3rem;
   }
+
+  .t-card .t-ico svg { width: 22px; height: 22px; }
 
   .t-card h2 {
     grid-column: 2;
@@ -372,6 +446,8 @@ main {
 
   .t-rotulo,
   .t-link { display: none; }
+
+  .t-footer-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
