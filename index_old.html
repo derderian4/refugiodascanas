@@ -3,65 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refúgio das Canas</title>
+  <meta name="theme-color" content="#1f1a2e">
+  <meta name="robots" content="noindex">
+  <title>Refúgio das Canas | Teste de identidade visual</title>
   <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/include.js" defer></script>
+  <!-- Página de teste com identidade visual própria; não usa css/styles.css nem os componentes compartilhados. -->
+  <link rel="stylesheet" href="css/teste_old.css">
 </head>
 
 <body>
+  <header class="t-header">
+    <a class="t-marca" href="index.html">
+      <img src="img/logo.png" alt="">
+      <span>Refúgio das Canas</span>
+    </a>
+    <nav class="t-nav" aria-label="Navegação principal">
+      <a href="pages/acomodacoes/index.html">Acomodações</a>
+      <a href="pages/hospedes/index.html">Hóspedes</a>
+      <a href="pages/balsa.html">Balsa</a>
+      <a href="pages/contatos/contatos_uteis.html">Contato</a>
+    </nav>
+    <details class="t-menu">
+      <summary aria-label="Abrir menu">
+        <span class="t-menu-icone" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Menu</span>
+      </summary>
+      <nav class="t-menu-painel" aria-label="Navegação principal (celular)">
+        <a href="pages/acomodacoes/index.html"><span class="t-menu-emoji" aria-hidden="true">🏠</span>Acomodações</a>
+        <a href="pages/hospedes/index.html"><span class="t-menu-emoji" aria-hidden="true">🧳</span>Hóspedes</a>
+        <a href="pages/balsa.html"><span class="t-menu-emoji" aria-hidden="true">⛴</span>Balsa</a>
+        <a href="pages/contatos/contatos_uteis.html"><span class="t-menu-emoji" aria-hidden="true">📞</span>Contato</a>
+      </nav>
+    </details>
+  </header>
 
-  <div id="header"></div>
+  <section class="t-hero" aria-labelledby="t-titulo">
+    <p class="t-selo">Ilhabela · SP</p>
+    <h1 id="t-titulo">Seu guia para viver <span>Ilhabela</span> do nascer ao pôr do sol.</h1>
+    <p>Informações da hospedagem, lugares especiais e tudo o que você precisa para aproveitar a ilha.</p>
+  </section>
 
   <main>
-    <section class="home-intro" aria-labelledby="home-title">
-      <p class="eyebrow">Um refúgio para chamar de seu</p>
-      <h2 id="home-title">Seu guia para viver Ilhabela.</h2>
-      <p>Informações da hospedagem, lugares especiais e tudo o que você precisa para aproveitar a ilha.</p>
-    </section>
-
-    <section class="home-grid" aria-label="Acesse o guia do Refúgio das Canas">
-
-      <article class="item-card">
-        <span class="item-label">Sua estadia</span>
-        <h2>🏠 Informações da Acomodação</h2>
-        <p>Wi-Fi, regras da casa, check-in e check-out</p>
-        <a href="pages/acomodacoes/informacao_acomodacao.html" class="btn">Ver informações</a>
-      </article>
-
-      <article class="item-card">
-        <span class="item-label">Sabores locais</span>
-        <h2>🍽 Alimentação</h2>
-        <p>Descubra onde comer bem</p>
-        <a href="pages/hospedes/alimentacao.html" class="btn">Ver restaurantes</a>
-      </article>
-
-      <article class="item-card">
-        <span class="item-label">Explore a ilha</span>
-        <h2>📍 Praias, Mirantes e Cachoeiras</h2>
-        <p>Lugares imperdíveis</p>
-        <a href="pages/hospedes/pontos_turisticos.html" class="btn">Ver lugares</a>
-      </article>
-
-      <article class="item-card">
-        <span class="item-label">Passeios</span>
-        <h2>🎉 O que fazer</h2>
-        <p>Atividades e passeios</p>
-        <a href="pages/hospedes/atividades.html" class="btn">Ver atividades</a>
-      </article>
-
-      <article class="item-card">
-        <span class="item-label">Estamos por perto</span>
-        <h2>📞 Contatos Úteis</h2>
-        <p>Emergências, farmácia, transporte e anfitrião</p>
-        <a href="pages/contatos/contatos_uteis.html" class="btn">Ver contatos</a>
-      </article>
-
-    </section>
-
+    <ul class="t-grid" aria-label="Acesse o guia do Refúgio das Canas">
+      <li>
+        <a class="t-card" href="pages/acomodacoes/refugio-das-canas/index.html">
+          <span class="t-icone" aria-hidden="true">🏠</span>
+          <span class="t-rotulo">Sua estadia</span>
+          <h2>Informações da acomodação</h2>
+          <p>Comodidades, fotos e como chegar ao estúdio.</p>
+          <span class="t-link">Ver informações</span>
+        </a>
+      </li>
+      <li>
+        <a class="t-card" href="pages/hospedes/alimentacao.html">
+          <span class="t-icone" aria-hidden="true">🍽</span>
+          <span class="t-rotulo">Sabores locais</span>
+          <h2>Alimentação</h2>
+          <p>Descubra onde comer bem.</p>
+          <span class="t-link">Ver restaurantes</span>
+        </a>
+      </li>
+      <li>
+        <a class="t-card" href="pages/hospedes/pontos_turisticos.html">
+          <span class="t-icone" aria-hidden="true">📍</span>
+          <span class="t-rotulo">Explore a ilha</span>
+          <h2>Praias, mirantes e cachoeiras</h2>
+          <p>Lugares imperdíveis.</p>
+          <span class="t-link">Ver lugares</span>
+        </a>
+      </li>
+      <li>
+        <a class="t-card" href="pages/hospedes/atividades.html">
+          <span class="t-icone" aria-hidden="true">🎉</span>
+          <span class="t-rotulo">Passeios</span>
+          <h2>O que fazer</h2>
+          <p>Atividades e passeios.</p>
+          <span class="t-link">Ver atividades</span>
+        </a>
+      </li>
+      <li>
+        <a class="t-card" href="pages/contatos/contatos_uteis.html">
+          <span class="t-icone" aria-hidden="true">📞</span>
+          <span class="t-rotulo">Estamos por perto</span>
+          <h2>Contatos</h2>
+          <p>Fale com a gente pelo WhatsApp ou Instagram.</p>
+          <span class="t-link">Ver contatos</span>
+        </a>
+      </li>
+    </ul>
   </main>
 
-  <div id="footer"></div>
-
+  <footer class="t-footer">
+    <p>© 2026 Refúgio das Canas · Ilhabela, SP</p>
+  </footer>
 </body>
 </html>
