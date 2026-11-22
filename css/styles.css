@@ -442,7 +442,7 @@ main {
 .hero::before {
   background:
     linear-gradient(180deg, rgba(31, 26, 46, 0.88) 0%, rgba(44, 36, 64, 0.62) 50%, rgba(224, 105, 74, 0.78) 100%),
-    url("../pages/acomodacoes/refugio-das-canas/img/foto-principal.jpg") center / cover no-repeat,
+    url("../pages/acomodacoes/refugio-estudio/img/foto-principal.jpg") center / cover no-repeat,
     var(--noite-2);
 }
 
@@ -788,6 +788,55 @@ button {
 .accommodation-photo-link:focus-visible {
   outline: 3px solid var(--sol);
   outline-offset: -3px;
+}
+
+/* Selo de capacidade (cards e topo das páginas de acomodação) */
+.accommodation-capacity,
+.accommodation-card > p.accommodation-capacity,
+.page-intro > p.accommodation-capacity {
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  color: var(--texto);
+  background: var(--creme);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.accommodation-capacity .icone {
+  width: 18px;
+  height: 18px;
+  color: var(--terracota);
+}
+
+.page-intro > p.accommodation-capacity {
+  margin: 20px auto 0;
+  border-color: transparent;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.page-intro > p.accommodation-capacity .icone {
+  color: var(--sol);
+}
+
+/* Texto só para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Galeria de fotos */

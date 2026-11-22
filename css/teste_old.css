@@ -191,7 +191,7 @@ img { display: block; max-width: 100%; }
   color: #fff;
   background:
     linear-gradient(180deg, rgba(31, 26, 46, 0.88) 0%, rgba(44, 36, 64, 0.62) 50%, rgba(224, 105, 74, 0.78) 100%),
-    url("../pages/acomodacoes/refugio-das-canas/img/foto-principal.jpg") center / cover no-repeat,
+    url("../pages/acomodacoes/refugio-estudio/img/foto-principal.jpg") center / cover no-repeat,
     var(--noite-2);
 }
 
